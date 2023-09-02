@@ -1,13 +1,13 @@
-package com.example.demo.domain;
+package com.example.demo.adapter.in.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDate;
 
-@AllArgsConstructor
 @Data
-public class Estudiante {
+@AllArgsConstructor
+public class EstudianteDTO {
     private Long id;
     private String nombre;
     private String apellido;

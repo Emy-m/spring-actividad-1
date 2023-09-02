@@ -1,26 +1,16 @@
 package com.example.demo.domain;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.Data;
 
 import java.time.LocalDate;
 
 @AllArgsConstructor
-@NoArgsConstructor
-@Entity
-@Table(name = "inscripciones")
+@Data
 public class Inscripcion {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate fechaDeInscripcion;
-
-    @ManyToOne
-    @JoinColumn(name = "estudiante_id")
+    private String estado;
     private Estudiante estudiante;
-
-    @ManyToOne
-    @JoinColumn(name = "curso_id")
     private Curso curso;
 }

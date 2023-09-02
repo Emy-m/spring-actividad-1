@@ -1,18 +1,12 @@
 package com.example.demo.domain;
-
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.time.LocalDate;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
-@Entity
-@Table(name = "cursos")
 public class Curso {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private String descripcion;
