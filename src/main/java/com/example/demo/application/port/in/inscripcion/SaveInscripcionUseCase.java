@@ -1,7 +1,7 @@
 package com.example.demo.application.port.in.inscripcion;
 
-import com.example.demo.adapter.in.api.dto.InscripcionDTO;
+import com.example.demo.domain.Inscripcion;
 
 public interface SaveInscripcionUseCase {
-    void saveInscripcion(InscripcionDTO inscripcionDTO);
+    void save(Inscripcion inscripcion);
 }

@@ -17,4 +17,8 @@ public interface EstudiantePort {
     List<Estudiante> findAllByDNIGreaterThanAndApellidoEquals();
 
     void save(Estudiante estudiante);
+
+    void update(Long id, Estudiante estudiante);
+
+    void deleteById(Long id);
 }

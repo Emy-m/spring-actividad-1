@@ -12,4 +12,6 @@ public interface CursoPort {
     List<Curso> findAll();
 
     List<Curso> findAllByFechaInicioGreaterThan(LocalDate fechaDeInicio);
+
+    void save(Curso curso);
 }

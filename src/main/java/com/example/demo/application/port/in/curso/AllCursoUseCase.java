@@ -1,12 +1,12 @@
 package com.example.demo.application.port.in.curso;
 
-import com.example.demo.adapter.in.api.dto.CursoDTO;
+import com.example.demo.domain.Curso;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public interface AllCursoUseCase {
-    List<CursoDTO> findAll();
+    List<Curso> findAll();
 
-    List<CursoDTO> findAllAfterDate(LocalDate date);
+    List<Curso> findAllAfterDate(LocalDate date);
 }

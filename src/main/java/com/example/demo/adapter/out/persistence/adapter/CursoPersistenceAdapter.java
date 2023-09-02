@@ -37,4 +37,10 @@ public class CursoPersistenceAdapter implements CursoPort {
         List<CursoEntity> cursoEntities = cursoRepository.findAllByFechaInicioGreaterThan(fechaInicio);
         return cursoEntities.stream().map(cursoEntity -> cursoMapper.mapToDomainEntity(cursoEntity)).toList();
     }
+
+    @Override
+    public void save(Curso curso) {
+        CursoEntity cursoEntity = cursoMapper.mapToJpaEntity(curso);
+        cursoRepository.save(cursoEntity);
+    }
 }

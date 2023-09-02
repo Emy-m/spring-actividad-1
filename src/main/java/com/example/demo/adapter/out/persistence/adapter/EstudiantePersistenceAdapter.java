@@ -50,4 +50,16 @@ public class EstudiantePersistenceAdapter implements EstudiantePort {
         EstudianteEntity estudianteEntity = estudianteMapper.mapToJpaEntity(estudiante);
         estudianteRepository.save(estudianteEntity);
     }
+
+    @Override
+    public void update(Long id, Estudiante estudiante) {
+        EstudianteEntity estudianteEntity = estudianteMapper.mapToJpaEntity(estudiante);
+        estudianteEntity.setId(id);
+        estudianteRepository.save(estudianteEntity);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        estudianteRepository.deleteById(id);
+    }
 }

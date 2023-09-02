@@ -1,11 +1,11 @@
 package com.example.demo.application.port.in.inscripcion;
 
-import com.example.demo.adapter.in.api.dto.InscripcionDTO;
+import com.example.demo.domain.Inscripcion;
 
 import java.util.List;
 
 public interface AllInscripcionUseCase {
-    List<InscripcionDTO> findAllRechazadaOrPendiente();
+    List<Inscripcion> findAllRechazadaOrPendiente();
 
-    List<InscripcionDTO> findAllByEstado(String estado);
+    List<Inscripcion> findAllByEstado(String estado);
 }
